@@ -23,11 +23,11 @@ station = {
     "高鐵臺中站": "6b0c61b9-4b22-4332-8483-db4a0828cedc"
 }
 
-# StartSiteName = input("Please Input Start Station：")
-# StopSiteName = input("Please Input End Station：")
+StartSiteName = input("Please Input Start Station：")
+StopSiteName = input("Please Input End Station：")
 
-StartSiteName = "北屯總站"
-StopSiteName = "高鐵臺中站"
+# StartSiteName = "北屯總站"
+# StopSiteName = "高鐵臺中站"
 
 StartValue = station[StartSiteName]
 StopValue = station[StopSiteName]
