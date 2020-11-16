@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-import requests, json
+import requests, json, os
 from bs4 import BeautifulSoup
 
 station = {
@@ -26,9 +26,6 @@ station = {
 StartSiteName = input("Please Input Start Station：")
 StopSiteName = input("Please Input End Station：")
 
-# StartSiteName = "北屯總站"
-# StopSiteName = "高鐵臺中站"
-
 StartValue = station[StartSiteName]
 StopValue = station[StopSiteName]
 
@@ -43,8 +40,9 @@ ElectronicFare = r['ElectronicFare']
 RespectFare = r['RespectFare']
 SpendTime = r['SpendTime']
 
-print("起站：{StartSiteName} －> 訖站：{StopSiteName}".format(StartSiteName = StartSiteName , StopSiteName = StopSiteName))
-print("單程票票價：{GeneralFare} 元".format(GeneralFare = GeneralFare))
-print("電子票證：{ElectronicFare} 元".format(ElectronicFare = ElectronicFare))
-print("敬老卡、愛心卡、愛心陪伴卡：{RespectFare} 元".format(RespectFare = RespectFare))
-print("乘車時間：{SpendTime} 分鐘".format(SpendTime = SpendTime))
+print("起站：{StartSiteName} －> 訖站：{StopSiteName} (乘車時間：{SpendTime} 分鐘)\n".format(StartSiteName = StartSiteName , StopSiteName = StopSiteName, SpendTime = SpendTime))
+print("|----------|----------|----------------------------|")
+print("| 單程票價 | 電子票證 | 敬老卡、愛心卡、愛心陪伴卡 |")
+print("|----------|----------|----------------------------|")
+print("|   {GeneralFare}元   |   {ElectronicFare}元   |            {RespectFare}元            |".format(GeneralFare = GeneralFare, ElectronicFare = ElectronicFare, RespectFare = RespectFare))
+print("|----------|----------|----------------------------|")
